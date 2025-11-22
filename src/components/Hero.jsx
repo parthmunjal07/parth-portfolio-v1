@@ -53,8 +53,9 @@ function Hero() {
           and many more coming soon!!
         </div>
 
-        <div className="mt-10 text-left">
+        <div className="mt-10 ">
           <h1 className="text-3xl font-bold">Experience</h1>
+          <p className="text-xl">Currently Learning, No work experience yet...</p>
         </div>
 
         <div className="align-bottom text-3xl mt-20 font-bold">

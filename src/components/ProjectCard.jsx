@@ -2,9 +2,9 @@ import React from "react";
 
 function ProjectCard(props) {
   return (
-    <div>
-    <div className="border-2 border-gray-300 w-[30%] rounded-lg p-4 m-4 hover:shadow-lg transition-shadow duration-300">
-      <img className="width-10" src="" alt={props.name} />
+    
+    <div className="border-2 border-gray-300 w-[50%] rounded-lg p-4 m-4 hover:shadow-lg transition-shadow duration-300">
+      <img className="w-[200px]" src="" alt={props.name} />
       <div className="flex justify-between">
         <div>
           <h1 className="text-3xl">{props.name}</h1>
@@ -13,7 +13,7 @@ function ProjectCard(props) {
           <a href={props.liveLink}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width={20}
+              width="25"
               fill="currentColor"
               viewBox="0 0 256 256"
             >
@@ -40,7 +40,6 @@ function ProjectCard(props) {
       </div>
 
       <p className="mt-3 text-l text-gray-500">{props.description}</p>
-    </div>
     </div>
   );
 }
