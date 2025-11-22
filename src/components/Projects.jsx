@@ -11,12 +11,14 @@ function Projects() {
         <ProjectCard
           name="Portfolio-v1"
           description="Version-1 of my personal portfolio website. In this I have tried to maintain the simplicity with focus on content I am providing instead of the animations and stuff..."
+            image="src/assets/Portfolio.png"
           liveLink="#"
           githubLink="https://github.com/parthmunjal07/parth-portfolio-v1"
         />
         <ProjectCard
           name="Cafe-Mate"
           description="An online prototype for a canteen management system for colleges where students can order food online from their phones and collect it from the counter without waiting in long queues..."
+          image="src/assets/CafeMate.png"
           liveLink="#"
           githubLink="https://github.com/parthmunjal07/CafeMate"
         />
@@ -24,7 +26,8 @@ function Projects() {
       <div className="flex justify-between">
         <ProjectCard
           name="Eventify"
-          description="Version-1 of my personal portfolio website. In this I have tried to maintain the simplicity with focus on content I am providing instead of the animations and stuff..."
+          description="An all-in-one event tracking web application that helps college clubs and students to manage and keep track of various events happening in the college..."
+          image="src/assets/Eventify.png"
           liveLink="#"
           githubLink="https://github.com/parthmunjal07/Eventify-Event-Tracker"
         />
