@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Blogs from "./components/Blogs";
-import ProjectCard from "./components/ProjectCard";
 
 function App() {
   return (

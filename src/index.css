@@ -4,6 +4,7 @@
     background-color: black;
     color: aliceblue;
     font-family: Outfit;
+    margin-bottom: 10px;
 }
 body::selection{
     background-color: white;
