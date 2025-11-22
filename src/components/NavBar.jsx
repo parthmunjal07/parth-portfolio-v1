@@ -12,7 +12,7 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="w-full bg-transparent">
+    <header className="w-full bg-transparent fixed">
       <div className="max-w-4xl mx-auto flex items-center justify-between px-4 py-3">
         <div className="text-lg sm:text-2xl font-bold">Parth Munjal</div>
 

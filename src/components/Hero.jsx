@@ -53,7 +53,11 @@ function Hero() {
           and many more coming soon!!
         </div>
 
-        <div className="align-bottom text-3xl font-bold">
+        <div className="mt-10 text-left">
+          <h1 className="text-3xl font-bold">Experience</h1>
+        </div>
+
+        <div className="align-bottom text-3xl mt-20 font-bold">
           <h2>Connect With Me</h2>
           <div className="flex gap-4 justify-center mt-2">
             <a
