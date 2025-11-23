@@ -64,7 +64,7 @@ function Hero() {
           <h2>Connect With Me</h2>
           <div className="flex gap-4 justify-center mt-2">
             <a
-              href="https://www.linkedin.com/in/parth-munjal-123456789/"
+              href="https://www.linkedin.com/in/parth-munjal-264508368/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
