@@ -1,27 +1,27 @@
+// components/BlogCard.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function BlogCard(props) {
+export default function BlogCard({ title, content, link }) {
   return (
-    <div className="border-2 border-gray-300 w-[30%] rounded-lg p-4 m-4 hover:shadow-lg transition-shadow duration-300">
-      <h1 className="text-3xl">{props.title}</h1>
-      <p>{props.content}</p>
-      <Link to={props.link}>
-        Read more{" "}
+    <div className="border-2 border-gray-300 w-[50%] rounded-lg p-4 m-4 hover:shadow-lg transition-shadow duration-300">
+      <h1 className="text-3xl">{title}</h1>
+      <p>{content}</p>
+
+      <Link to={link} className="inline-flex items-center gap-2 mt-2">
+        <span>Read more</span>
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
           viewBox="0 0 24 24"
+          fill="none"
         >
           <path
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M19 12H5m14 0-4 4m4-4-4-4"
           />
         </svg>

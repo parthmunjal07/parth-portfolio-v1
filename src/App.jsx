@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Blogs from "./components/Blogs";
 import BlogCard from "./components/BlogCard";
+import Blog1 from "./components/blogs/Blog1";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
+        <Route path="/blog1" element={<Blog1 />} />
       </Routes>
     </BrowserRouter>
 
