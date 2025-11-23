@@ -18,7 +18,9 @@ function About() {
             <br />
             And guess what? I didn't do it afterwards. Why? Well we all are brought up in a society where we have to give boards and then if you want to get a good college there is JEE. So 11th and 12th went in that.
             <br />
-            Did I get an IIT or NIT? Nah, I got "The YMCA Faridabad". So there was nothing but to accept the truth. Only good thing about my college its 15 mins away from my home.
+            Did I get an IIT or NIT? Nah, I got a state govt. university (Not the best but not the worst). So there was nothing but to accept the truth.
+            <br />
+            But in contrary I got a new circle of friends who were as enthusiastic as me. Who wanted to learn and explore new things. 
             <br />
             So, I gave myself a fresh start. New people, new environment and most work on myself (self improvement)
           </p>
