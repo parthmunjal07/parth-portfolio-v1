@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Blogs from "./components/Blogs";
+import BlogCard from "./components/BlogCard";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
+
     
   );
 }
