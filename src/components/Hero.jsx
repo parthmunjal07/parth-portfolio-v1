@@ -1,6 +1,5 @@
-// Hero.jsx
 import React from "react";
-import profile from "../assets/profile.jpg"; // adjust path if needed
+import profile from "../assets/profile.jpg";
 
 function Hero() {
   return (
