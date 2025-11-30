@@ -15,7 +15,7 @@ function Projects() {
           name="Portfolio-v1"
           description="Version-1 of my personal portfolio website. In this I have tried to maintain the simplicity with focus on content I am providing instead of the animations and stuff..."
           image={portfolio}
-          liveLink="#"
+          liveLink="https://parth-portfolio-v1.vercel.app/"
           githubLink="https://github.com/parthmunjal07/parth-portfolio-v1"
         />
         <ProjectCard
