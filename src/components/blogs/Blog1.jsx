@@ -2,7 +2,7 @@ import React from "react";
 
 function Blog1() {
   return (
-    <div className="bg-gray-700 w-[65%] mx-auto p-8">
+    <div className="bg-gray-700 w-[90%] md:w-[65%] mx-auto p-8">
       <div className="mt-16">
         <h1 className="text-4xl text-center font-bold leading-tight">
           My Bucket List / Goals

@@ -3,8 +3,8 @@ import profile from "../assets/profile.jpg";
 
 function Hero() {
   return (
-    <div className="bg-gray-700 h-full w-[65%] mx-auto flex justify-center text-center">
-      <div className="mt-20 flex flex-col gap-4 items-center ">
+    <div className="bg-gray-700 h-full w-[90%] md:w-[65%] mx-auto flex justify-center text-center">
+      <div className="mt-25 flex flex-col gap-4 items-center ">
         <img
           src={profile}
           alt="Parth Munjal — profile"

@@ -6,8 +6,8 @@ import portfolio from "../assets/portfolio.png";
 
 function Projects() {
   return (
-    <div className="flex flex-col justify-center w-[65%] mx-auto">
-      <div className="w-full text-center my-20">
+    <div className="flex flex-col justify-center w-[90%] md:w-[65%] mx-auto">
+      <div className="w-full text-center mt-25">
         <h1 className="text-5xl font-bold">My Projects</h1>
       </div>
       <div className="flex justify-between">
