@@ -24,15 +24,6 @@ function Hero() {
         <div>
           My Skillset:{" "}
           <a
-            href="https://tailwindcss.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end dark:text-white hover:cursor-pointer mr-2"
-          >
-            Tailwind CSS
-          </a>
-          ,
-          <a
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,6 +40,15 @@ function Hero() {
           >
             React
           </a>{" "}
+          ,
+          <a
+            href="https://tailwindcss.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end dark:text-white hover:cursor-pointer mr-2"
+          >
+            Tailwind CSS
+          </a>
           and many more coming soon!!
         </div>
 
