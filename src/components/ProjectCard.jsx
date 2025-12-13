@@ -3,7 +3,7 @@ import React from "react";
 function ProjectCard(props) {
   return (
     
-    <div className="border-2 border-gray-300 w-[50%] rounded-lg p-4 m-4 hover:shadow-lg transition-shadow duration-300">
+    <div className="border-2 border-gray-300 w-[90%] md:w-[90%] rounded-lg p-4 m-4 hover:shadow-lg transition-shadow duration-300">
       <img className="w-[350px] p-3 rounded-2xl" src={props.image} alt={props.name} />
       <div className="flex justify-between">
         <div>

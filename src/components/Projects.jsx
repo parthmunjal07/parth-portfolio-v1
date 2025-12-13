@@ -3,14 +3,16 @@ import ProjectCard from "./ProjectCard";
 import cafeMate from "../assets/cafeMate.png";
 import eventify from "../assets/eventify.png";
 import portfolio from "../assets/portfolio.png";
+import PageWrapper from "./PageWrapper";
 
 function Projects() {
   return (
+    <PageWrapper>
     <div className="flex flex-col justify-center w-[90%] md:w-[65%] mx-auto">
       <div className="w-full text-center mt-25">
         <h1 className="text-5xl font-bold">My Projects</h1>
       </div>
-      <div className="flex justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <ProjectCard
           name="Portfolio-v1"
           description="Version-1 of my personal portfolio website. In this I have tried to maintain the simplicity with focus on content I am providing instead of the animations and stuff..."
@@ -25,8 +27,6 @@ function Projects() {
           liveLink="#"
           githubLink="https://github.com/parthmunjal07/CafeMate"
         />
-      </div>
-      <div className="flex justify-between">
         <ProjectCard
           name="eventify"
           description="An all-in-one event tracking web application that helps college clubs and students to manage and keep track of various events happening in the college..."
@@ -36,6 +36,7 @@ function Projects() {
         />
       </div>
     </div>
+    </PageWrapper>
   );
 }
 

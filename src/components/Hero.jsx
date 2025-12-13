@@ -1,8 +1,10 @@
 import React from "react";
 import profile from "../assets/profile.jpg";
+import PageWrapper from "./PageWrapper";
 
 function Hero() {
   return (
+    <PageWrapper>
     <div className="bg-gray-700 h-full w-[90%] md:w-[65%] mx-auto flex justify-center text-center">
       <div className="mt-25 flex flex-col gap-4 items-center ">
         <img
@@ -201,6 +203,7 @@ function Hero() {
         </div>
       </div>
     </div>
+    </PageWrapper>
   );
 }
 
