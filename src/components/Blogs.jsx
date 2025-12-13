@@ -1,8 +1,10 @@
 import React from "react";
 import BlogCard from "./BlogCard";
+import PageWrapper from "./PageWrapper";
 
 function Blogs() {
   return (
+    <PageWrapper>
     <section id="blogs" className="bg-gray-700 text-white w-[90%] md:w-[65%] mx-auto">
       <div className="max-w-4xl mx-auto px-4 pt-24 pb-12">
         <h1 className="text-4xl font-bold scroll-mt-24">Blogs</h1>
@@ -13,6 +15,7 @@ function Blogs() {
         link="/blog1" />
       </div>
     </section>
+    </PageWrapper>
   );
 }
 
