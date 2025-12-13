@@ -18,7 +18,7 @@ export default function NavBar() {
         <div className="text-lg sm:text-2xl font-bold">Parth Munjal</div>
 
         
-        <nav className="hidden sm:flex gap-6 text-base font-medium">
+        <nav className="hidden sm:flex gap-6 text-l font-medium">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -72,14 +72,14 @@ export default function NavBar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="sm:hidden px-4 pb-3 max-w-4xl mx-auto flex flex-col gap-3 text-base"
+            className="sm:hidden px-4 pb-3 max-w-4xl mx-auto flex flex-col gap-3 text-xl"
           >
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `py-2 px-3 rounded-lg ${
+                  `px-3 rounded-lg ${
                     isActive
                       ? "bg-blue-100 text-blue-600 font-semibold"
                       : "hover:bg-gray-100"
