@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -12,11 +13,11 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="w-full bg-transparent fixed">
+    <header className="w-full bg-transparent fixed z-50">
       <div className="max-w-4xl mx-auto flex items-center justify-between px-4 py-3">
         <div className="text-lg sm:text-2xl font-bold">Parth Munjal</div>
 
-        {/* Desktop Menu */}
+        
         <nav className="hidden sm:flex gap-6 text-base font-medium">
           {navItems.map((item) => (
             <NavLink
@@ -33,7 +34,7 @@ export default function NavBar() {
           ))}
         </nav>
 
-        {/* Mobile Hamburger */}
+        
         <button
           className="sm:hidden p-2"
           onClick={() => setOpen(!open)}
@@ -63,27 +64,35 @@ export default function NavBar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {open && (
-        <nav className="sm:hidden px-4 pb-3 max-w-4xl mx-auto flex flex-col gap-3 text-base">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                `py-2 px-3 rounded-lg ${
-                  isActive
-                    ? "bg-blue-100 text-blue-600 font-semibold"
-                    : "hover:bg-gray-100"
-                }`
-              }
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </nav>
-      )}
+
+      <AnimatePresence>
+        {open && (
+          <motion.nav
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="sm:hidden px-4 pb-3 max-w-4xl mx-auto flex flex-col gap-3 text-base"
+          >
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  `py-2 px-3 rounded-lg ${
+                    isActive
+                      ? "bg-blue-100 text-blue-600 font-semibold"
+                      : "hover:bg-gray-100"
+                  }`
+                }
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
