@@ -7,6 +7,7 @@ import About from "./components/About";
 import Blogs from "./components/Blogs";
 import BlogCard from "./components/BlogCard";
 import Blog1 from "./components/blogs/Blog1";
+import CodingCons from "./components/blogs/CodingCons";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog1" element={<Blog1 />} />
+        <Route path="/blog2" element={<CodingCons />} />
       </Routes>
       </AnimatePresence>
     </BrowserRouter>

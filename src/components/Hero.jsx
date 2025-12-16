@@ -1,6 +1,7 @@
 import React from "react";
 import profile from "../assets/profile.jpg";
 import PageWrapper from "./PageWrapper";
+import PostCard from "./PostCard";
 
 function Hero() {
   return (
