@@ -4,7 +4,7 @@ function ProjectCard(props) {
   return (
     
     <div className="border-2 border-gray-300 w-[90%] md:w-[90%] rounded-lg p-4 m-4 hover:shadow-lg transition-shadow duration-300">
-      <img className="w-[350px] p-3 rounded-2xl" src={props.image} alt={props.name} />
+      <img className="w-[350px] p-3 rounded-2xl hover:scale-105 transition duration-300" src={props.image} alt={props.name} />
       <div className="flex justify-between">
         <div>
           <h1 className="text-3xl">{props.name}</h1>

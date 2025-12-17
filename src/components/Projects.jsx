@@ -28,7 +28,7 @@ function Projects() {
           githubLink="https://github.com/parthmunjal07/CafeMate"
         />
         <ProjectCard
-          name="eventify"
+          name="Eventify"
           description="An all-in-one event tracking web application that helps college clubs and students to manage and keep track of various events happening in the college..."
           image={eventify}
           liveLink="#"
