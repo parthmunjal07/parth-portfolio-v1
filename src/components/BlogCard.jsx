@@ -9,7 +9,7 @@ export default function BlogCard({ title, content, link }) {
       <p>{content}</p>
 
       <Link to={link} className="inline-flex items-center gap-2 mt-2">
-        <span>Read more</span>
+        <span className="hover:underline">Read more</span>
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white"
           aria-hidden="true"
