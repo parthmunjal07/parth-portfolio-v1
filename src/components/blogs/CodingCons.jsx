@@ -1,8 +1,9 @@
 import React from "react";
 import PageWrapper from "../PageWrapper";
+import PostCard from "../PostCard";
 
 export default function CodingCons() {
-    const posts = [
+  const posts = [
     {
       image: "/src/assets/day-0.jpg",
       caption: "Day 0 of posting daily about coding & consistency 🚀",
@@ -16,13 +17,13 @@ export default function CodingCons() {
       postLink: "https://www.instagram.com/p/DSRmMdAD2Ir/?img_index=1",
     },
     {
-      image: "/src/assets/Day-1.png",
+      image: "/src/assets/Day-2.png",
       caption: "Day 2 of posting daily about coding & consistency 🚀",
       date: "Day 2 • 16 Dec 2025",
       postLink: "https://www.instagram.com/p/DSS_3-uE0BN/",
     },
     {
-      image: "/src/assets/Day-1.png",
+      image: "/src/assets/Day-3.png",
       caption: "Day 3 of posting daily about coding & consistency 🚀",
       date: "Day 3 • 17 Dec 2025",
       postLink: "https://www.instagram.com/p/DSVffW5E7no/",
@@ -37,6 +38,11 @@ export default function CodingCons() {
           </h1>
           <p className="text-xl text-center">Code. Post. Grind. Repeat.</p>
           <hr className="bg-gray-500" />
+          <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
+            {posts.map((post, index) => (
+              <PostCard key={index} {...post} />
+            ))}
+          </div>
         </div>
       </div>
     </PageWrapper>
