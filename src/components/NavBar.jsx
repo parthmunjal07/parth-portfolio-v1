@@ -16,8 +16,6 @@ export default function NavBar() {
     <header className="w-full bg-transparent fixed z-50">
       <div className="max-w-4xl mx-auto flex items-center justify-between px-4 py-3">
         <div className="text-lg sm:text-2xl font-bold">Parth Munjal</div>
-
-        
         <nav className="hidden sm:flex gap-6 text-l font-medium">
           {navItems.map((item) => (
             <NavLink
@@ -33,8 +31,6 @@ export default function NavBar() {
             </NavLink>
           ))}
         </nav>
-
-        
         <button
           className="sm:hidden p-2"
           onClick={() => setOpen(!open)}
@@ -63,7 +59,6 @@ export default function NavBar() {
           </svg>
         </button>
       </div>
-
 
       <AnimatePresence>
         {open && (
