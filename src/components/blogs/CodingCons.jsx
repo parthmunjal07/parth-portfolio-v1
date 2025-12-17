@@ -1,29 +1,33 @@
 import React from "react";
 import PageWrapper from "../PageWrapper";
 import PostCard from "../PostCard";
+import Day0 from "./posts/day-0.jpg"
+import Day1 from "./posts/Day-1.png"
+import Day2 from "./posts/Day-2.png"
+import Day3 from "./posts/Day-3.png"
 
 export default function CodingCons() {
   const posts = [
     {
-      image: "/src/assets/day-0.jpg",
+      image: Day0,
       caption: "Day 0 of posting daily about coding & consistency 🚀",
       date: "Day 0 • 14 Dec 2025",
       postLink: "https://www.instagram.com/p/DSO-OSWD-9t/",
     },
     {
-      image: "/src/assets/Day-1.png",
+      image: Day1,
       caption: "Explained arrays in Java with real examples 💻",
       date: "Day 1 • 15 Dec 2025",
       postLink: "https://www.instagram.com/p/DSRmMdAD2Ir/?img_index=1",
     },
     {
-      image: "/src/assets/Day-2.png",
+      image: Day2,
       caption: "Day 2 of posting daily about coding & consistency 🚀",
       date: "Day 2 • 16 Dec 2025",
       postLink: "https://www.instagram.com/p/DSS_3-uE0BN/",
     },
     {
-      image: "/src/assets/Day-3.png",
+      image: Day3,
       caption: "Day 3 of posting daily about coding & consistency 🚀",
       date: "Day 3 • 17 Dec 2025",
       postLink: "https://www.instagram.com/p/DSVffW5E7no/",
