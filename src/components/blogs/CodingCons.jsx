@@ -5,30 +5,37 @@ import Day0 from "./posts/day-0.jpg"
 import Day1 from "./posts/Day-1.png"
 import Day2 from "./posts/Day-2.png"
 import Day3 from "./posts/Day-3.png"
+import Day4 from "./posts/Day-4.png"
 
 export default function CodingCons() {
   const posts = [
     {
       image: Day0,
       caption: "Day 0 of posting daily about coding & consistency 🚀",
-      date: "Day 0 • 14 Dec 2025",
+      date: "Day 0 • 13 Dec 2025",
       postLink: "https://www.instagram.com/p/DSO-OSWD-9t/",
     },
     {
       image: Day1,
-      caption: "Explained arrays in Java with real examples 💻",
-      date: "Day 1 • 15 Dec 2025",
+      caption: "Explained arrays in Java with real examples",
+      date: "Day 1 • 14 Dec 2025",
       postLink: "https://www.instagram.com/p/DSRmMdAD2Ir/?img_index=1",
     },
     {
       image: Day2,
-      caption: "Day 2 of posting daily about coding & consistency 🚀",
-      date: "Day 2 • 16 Dec 2025",
+      caption: "Day 2 of posting daily about coding & consistency",
+      date: "Day 2 • 15 Dec 2025",
       postLink: "https://www.instagram.com/p/DSS_3-uE0BN/",
     },
     {
       image: Day3,
-      caption: "Day 3 of posting daily about coding & consistency 🚀",
+      caption: "Day 3 of posting daily about coding & consistency",
+      date: "Day 3 • 16 Dec 2025",
+      postLink: "https://www.instagram.com/p/DSVffW5E7no/",
+    },
+    {
+      image: Day4,
+      caption: "Day 4 of posting daily about coding & consistency",
       date: "Day 3 • 17 Dec 2025",
       postLink: "https://www.instagram.com/p/DSVffW5E7no/",
     },
