@@ -6,6 +6,7 @@ import Day1 from "./posts/Day-1.png"
 import Day2 from "./posts/Day-2.png"
 import Day3 from "./posts/Day-3.png"
 import Day4 from "./posts/Day-4.png"
+import Day5 from "./posts/Day-5.png"
 
 export default function CodingCons() {
   const posts = [
