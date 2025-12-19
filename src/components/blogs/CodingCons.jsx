@@ -36,8 +36,14 @@ export default function CodingCons() {
     {
       image: Day4,
       caption: "Day 4 of posting daily about coding & consistency",
-      date: "Day 3 • 17 Dec 2025",
-      postLink: "https://www.instagram.com/p/DSVffW5E7no/",
+      date: "Day 4 • 17 Dec 2025",
+      postLink: "https://www.instagram.com/p/DSYIPPQk8X6/",
+    },
+    {
+      image: Day5,
+      caption: "Day 5 of posting daily about coding & consistency",
+      date: "Day 5 • 18 Dec 2025",
+      postLink: "https://www.instagram.com/p/DSaxAavk95a/",
     },
   ];
   return (
