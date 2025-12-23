@@ -8,18 +8,21 @@ import Day3 from "./posts/Day-3.png"
 import Day4 from "./posts/Day-4.png"
 import Day5 from "./posts/Day-5.png"
 import Day6 from "./posts/Day-6.png"
+import Day7 from "./posts/Day-7.png"
+import Day9 from "./posts/Day-9.png"
+
 
 export default function CodingCons() {
   const posts = [
     {
       image: Day0,
-      caption: "Day 0 of posting daily about coding & consistency 🚀",
+      caption: "Day 0 of posting daily about coding & consistency",
       date: "Day 0 • 13 Dec 2025",
       postLink: "https://www.instagram.com/p/DSO-OSWD-9t/",
     },
     {
       image: Day1,
-      caption: "Explained arrays in Java with real examples",
+      caption: "Day 1 of posting daily about coding & consistency",
       date: "Day 1 • 14 Dec 2025",
       postLink: "https://www.instagram.com/p/DSRmMdAD2Ir/?img_index=1",
     },
@@ -52,6 +55,24 @@ export default function CodingCons() {
       caption: "Day 6 of posting daily about coding & consistency",
       date: "Day 6 • 19 Dec 2025",
       postLink: "https://www.instagram.com/p/DSdXsnNE8u-/",
+    },
+    {
+      image: Day7,
+      caption: "Day 7 of posting daily about coding & consistency",
+      date: "Day 7 • 20 Dec 2025",
+      postLink: "https://www.instagram.com/p/DSftYP1ktw2/?img_index=1",
+    },
+    {
+      image: Day7,
+      caption: "Day 8 of posting daily about coding & consistency",
+      date: "Day 8 • 21 Dec 2025",
+      postLink: "https://www.instagram.com/p/DSieBoDE2dL/",
+    },
+    {
+      image: Day9,
+      caption: "Day 9 of posting daily about coding & consistency",
+      date: "Day 9 • 22 Dec 2025",
+      postLink: "https://www.instagram.com/p/DSk97N1E6w_",
     },
   ];
   return (
