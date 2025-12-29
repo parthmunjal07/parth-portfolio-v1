@@ -20,8 +20,7 @@ function Hero() {
         </h1>
 
         <p className="text-2xl w-3/4">
-          I'm building and learning about web applications, DSA, AI and Machine
-          Learning.
+          I'm building and learning about FullStack Web Applications and DSA.
         </p>
 
         <div>
