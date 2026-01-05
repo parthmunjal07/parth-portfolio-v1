@@ -1,6 +1,8 @@
 import React from "react";
 import BlogCard from "./BlogCard";
 import PageWrapper from "./PageWrapper";
+import Goals from "./blogs/blogImg/Goals.jpeg"
+import Git from "./blogs/blogImg/GIt.png"
 
 function Blogs() {
   return (
@@ -12,9 +14,14 @@ function Blogs() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <BlogCard title="My Bucket List / Goals"
         content="Just a few of the things I want to achieve and am fascinated by."
-        link="/blog1" />
-        <BlogCard title="My Consistently coding challenge"
+        link="/blog1" 
+        image={Goals}/>
+        <BlogCard title="My learning on Git"
         content="Just a few of the things I want to achieve and am fascinated by."
+        link="/blog3"
+        image={Git} />
+        <BlogCard title="My Consistently coding challenge"
+        content="Just tried out a challenge."
         link="/blog2" />
       </div>
     </section>
