@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 export default function BlogCard({ title, content, link, image}) {
   return (
     <div className="border-2 border-gray-300 rounded-lg p-4 m-4 hover:shadow-lg transition-shadow duration-300">
-      <img src={image} alt="" />
-      <h1 className="text-3xl">{title}</h1>
+      <img src={image} alt="" className="rounded-2xl" />
+      <h1 className="text-3xl font-semibold mt-2">{title}</h1>
       <p>{content}</p>
 
       <Link to={link} className="inline-flex items-center gap-2 mt-2">

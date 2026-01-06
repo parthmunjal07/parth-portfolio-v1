@@ -4,26 +4,27 @@ import PageWrapper from "../PageWrapper";
 function Blog1() {
   return (
     <PageWrapper>
-      <div className="bg-gray-700 w-[90%] md:w-[65%] mx-auto p-8">
+      <div className="bg-black">
+      <div className="w-[90%] md:w-[65%] mx-auto p-8">
         <div className="mt-16">
-          <h1 className="text-4xl text-center font-bold leading-tight">
+          <h1 className="text-4xl text-white font-oswald text-center font-bold leading-tight">
             My Bucket List / Goals
           </h1>
-          <p className="text-xl text-center">
+          <p className="text-xl text-center font-inter text-white">
             So, if you have come here, you are interested in my aspirations.
           </p>
           <hr className="bg-gray-500" />
           <div className="mt-10">
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-2xl font-bold font-inter text-white">
               {" "}
               I. The things I want to buy after earning money.
             </h1>
-            <p className="text-xl">
+            <p className="text-xl font-inter text-white">
               Actually, there are some things of which I have made a list that I
               need to buy with my own money when whether through internship,
               freelance etc...
             </p>
-            <div className="mt-10">
+            <div className="mt-10 font-inter text-white">
               <ol className="list-[lower-roman]">
                 <li className="text-xl ml-10">
                   <span className="font-semibold underline underline-offset-4">
@@ -68,6 +69,7 @@ function Blog1() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </PageWrapper>
   );

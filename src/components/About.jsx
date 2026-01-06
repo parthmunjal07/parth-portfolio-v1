@@ -4,12 +4,12 @@ import PageWrapper from "./PageWrapper";
 function About() {
   return (
     <PageWrapper>
-    <section id="about" className="w-full bg-gray-700 text-white">
+    <section id="about" className="min-h-screen w-full bg-black text-white">
       <div className="max-w-4xl mx-auto px-4 pt-30 pb-12">
-        <h1 className="text-4xl font-bold scroll-mt-24">About Me</h1>
+        <h1 className="text-4xl font-bold scroll-mt-24 font-oswald text-center">About Me</h1>
 
         <div className="mt-5">
-          <p className="text-xl text-left">
+          <p className="text-xl text-left font-inter">
             <span>So you want to know more about me? </span>
             <br />
             Well, I'm a CS undergrad currently in my first year from Haryana,
