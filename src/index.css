@@ -1,11 +1,12 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
-*{
-    background-color: black;
-    color: aliceblue;
-    font-family: Outfit;
-    margin-bottom: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import "tailwindcss";
+
+@theme{
+    --font-inter:"Inter", serif;
+    --font-oswald:"Oswald", serif;
 }
+
 body::selection{
     background-color: white;
     color: black;
