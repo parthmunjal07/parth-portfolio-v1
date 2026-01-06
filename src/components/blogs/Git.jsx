@@ -83,16 +83,92 @@ function Git() {
             </h3>
             <p className="text-white text-xl font-inter mt-7">
               To collaborate we needed server like a solution so that everyone
-              code on the go at the same time. There some <b>GitHub</b>, a platform
-              where Git is hosted online like a google drive but for your codes.
-              Other popular services include software like <b>GitLab</b>, <b>BitBucket</b>, 
-              etc.
+              code on the go at the same time. There some <b>GitHub</b>, a
+              platform where Git is hosted online like a google drive but for
+              your codes. Other popular services include software like{" "}
+              <b>GitLab</b>, <b>BitBucket</b>, etc.
             </p>
             <hr className="text-gray-500 mt-2" />
             <h2 className="text-3xl text-white font-inter text-center font-semibold leading-tight mt-7 mb-6">
               {" "}
-              Part-2 : Why Version Control Exists: The Pen Drive Problem{" "}
+              Part-2 : Basics and Essential Commands{" "}
             </h2>
+            <h3 className="text-2xl font-semibold text-white font-inter mb-3">
+              What is Git :-
+            </h3>
+            <p className="text-white text-xl font-inter mt-7">
+              Before understanding Git we need to understand, what is a Version
+              Control System (VCS).
+            </p>
+            <p className="text-white text-xl font-inter mt-7">
+              <b>VCS</b> — A <b>Version Control System</b> is a type of software
+              that is used to track the changes done to the code overtime by a
+              contributor. Think of it as a person keeping record of every
+              change done to the allotted code.
+            </p>
+            <p className="text-white text-xl font-inter mt-7">
+              Talking about Git, it is the most widely used VCS made by Linus
+              Torvalds.
+            </p>
+            <h3 className="text-2xl font-semibold text-white font-inter mt-7">
+              Why Git is Used :-
+            </h3>
+            <p className="text-white text-xl font-inter mt-7">
+              So, before Git or any VCS existed, people faced this problem of
+              tracking their code. In projects with a big team no one knew what
+              changes were done by whom creating confusions. Also, if a bug was
+              introduced by a line of code, we didn’t have a checkpoint till the
+              time code was working.
+            </p>
+            <p className="text-white text-xl font-inter mt-7">
+              After Git and other VCS came, people kept a track of their code.
+              Just like we have checkpoints in a game, we can push the code to
+              productions at different checkpoints and if it encounters an error
+              we can start again at the last push / checkpoint.
+            </p>
+            <h3 className="text-2xl font-semibold text-white font-inter mt-7">
+              Git Basics and Core Terminologies :-
+            </h3>
+            <ol className="text-white text-xl font-inter mt-7 list-decimal pl-8 space-y-6 leading-relaxed">
+              <li>
+                <b>git init</b> - This command initialises an empty git
+                repository in your project and makes a folder name ‘.git‘ in
+                which all changes are tracked and stored.
+                <br />
+                Repository — A central location in which data is stored and
+                managed. Basically a place in the memory where all the changes
+                are stored and managed.
+                <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767004570013/0c09d73c-0768-45ac-b3df-64141504e242.png" alt="" />
+                <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767004808230/ed89bc41-d273-4dec-8a0a-df19b2212644.png" alt="" />
+              </li>
+              <li>
+                <b>git add {"<"}filename{">"}</b> — This command is used to add a file to
+                tracking inside the .git folder. If you want all files of your
+                project to put into tracking just type the command “git add .“
+                <br />
+                A simple explanation would says that you tell git, which files to remember.
+                <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767005476171/4ba42568-2bfe-47aa-9b4d-30e2d700b370.png" alt="" />
+                <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767005488212/bd3bc4b5-79d8-4f35-95c7-9c18abcca123.png" alt="" />
+              </li>
+              <li><b>git commit -m “message”</b> — This command is used to save the changes i.e. declaring a checkpoint in the repository. Every time you commit the code you save the changes creating a new checkpoint for returning to if required.
+              <br />
+              If you want to add and commit a file at the same time use the command “git commit -am “message“
+              <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767006285131/8c153666-1832-4617-bd50-50360c597855.png" alt="" />
+              <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767006463548/36366c5d-335b-4e82-b495-5540d25dfabf.png" alt="" />
+              </li>
+              <li>
+                <b>git log</b> — This command shows all the commits done to your file.
+                <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767006950574/64a19170-ce62-48df-82d7-2d44dbb7737f.png" alt="" />
+                Now if you want this to be shorter and easily readable use the command “git log --oneline“
+              </li>
+              <li><b>git diff</b> — Shows the changes done between two commits
+              <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767007877591/d2bbd1b8-2bdf-42c5-8eea-fcbf73fcae21.png" alt="" />
+              <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767007943288/9ec37a35-d049-4baa-a91a-2d509217faf4.png" alt="" />
+              <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1767007966722/4ffddb63-5a53-48c3-aa80-0f7527be65b5.png" alt="" />
+              </li>
+              <li><b>git revert</b> — This command is used to delete the last commit pushed to the code that is returning to the previous checkpoint.</li>
+              <li><b>git reset</b> — This command is used to revert all the commit till a specific previous commit.</li>
+            </ol>
           </div>
         </div>
       </div>
