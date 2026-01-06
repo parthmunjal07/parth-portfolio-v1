@@ -2,7 +2,7 @@ import React from "react";
 import BlogCard from "./BlogCard";
 import PageWrapper from "./PageWrapper";
 import Goals from "./blogs/blogImg/Goals.jpeg"
-import Git from "./blogs/blogImg/GIt.png"
+import Git from "./blogs/blogImg/Git.png"
 
 function Blogs() {
   return (
