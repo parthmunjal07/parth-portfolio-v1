@@ -7,7 +7,7 @@ function ProjectCard(props) {
       <img className="w-[350px] p-3 rounded-2xl hover:scale-105 transition duration-300" src={props.image} alt={props.name} />
       <div className="flex justify-between">
         <div>
-          <h1 className="text-3xl">{props.name}</h1>
+          <h1 className="text-3xl font-inter">{props.name}</h1>
         </div>
         <div className="flex">
           <a href={props.liveLink} target="_blank">
@@ -39,7 +39,7 @@ function ProjectCard(props) {
         </div>
       </div>
 
-      <p className="mt-3 text-l text-gray-500">{props.description}</p>
+      <p className="mt-3 text-l text-gray-500 font-inter">{props.description}</p>
     </div>
   );
 }

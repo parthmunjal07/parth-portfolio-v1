@@ -8,9 +8,10 @@ import PageWrapper from "./PageWrapper";
 function Projects() {
   return (
     <PageWrapper>
-    <div className="flex flex-col justify-center w-[90%] md:w-[65%] mx-auto">
-      <div className="w-full text-center mt-25">
-        <h1 className="text-5xl font-bold">My Projects</h1>
+      <div className="min-h-screen bg-black">
+    <div className="flex flex-col justify-center w-[90%] md:w-[65%] mx-auto text-white">
+      <div className="w-full text-center mt-25 mb-10">
+        <h1 className="text-5xl font-bold font-oswald">My Projects</h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <ProjectCard
@@ -35,6 +36,7 @@ function Projects() {
           githubLink="https://github.com/parthmunjal07/Eventify-Event-Tracker"
         />
       </div>
+    </div>
     </div>
     </PageWrapper>
   );
