@@ -19,12 +19,12 @@ function Blog1() {
               {" "}
               I. The things I want to buy after earning money.
             </h1>
-            <p className="text-xl font-inter text-white">
+            <p className="text-xl font-inter text-white mt-4">
               Actually, there are some things of which I have made a list that I
               need to buy with my own money when whether through internship,
               freelance etc...
             </p>
-            <div className="mt-10 font-inter text-white">
+            <div className="mt-7 font-inter text-white">
               <ol className="list-[lower-roman]">
                 <li className="text-xl ml-10">
                   <span className="font-semibold underline underline-offset-4">
@@ -66,6 +66,11 @@ function Blog1() {
                   <br />
                 </li>
               </ol>
+              <p className="font-inter text-2xl font-semibold mt-7">II. The Dream Trip to Japan</p>
+              <p className="font-inter text-xl mt-4">So to tell you I am a gearhead since my childhood and by gearhead I mean to my love towards cars and bikes.
+               </p>
+              <p className="font-inter text-xl mt-2">Like from my childhood I have grown playing games like the OG NFS and Asphalt, and moreover watching the movies of Fast and Furious, these machines have filled me up with passion.</p>
+              <p className="font-inter text-xl mt-2">So as most of you have been known about the car culture of Japan called as "JDM Culture", is what I want to experinece in front of me with my own eyes and have a ride on those modified machines once.</p>
             </div>
           </div>
         </div>
