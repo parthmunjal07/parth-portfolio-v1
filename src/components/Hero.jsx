@@ -2,6 +2,7 @@ import React from "react";
 import profile from "../assets/profile.jpg";
 import PageWrapper from "./PageWrapper";
 import PostCard from "./PostCard";
+import ExpTog from "./ExpTog";
 
 function Hero() {
   return (
@@ -58,14 +59,12 @@ function Hero() {
 
             <div className="mt-10 font-inter">
               <h1 className="text-3xl font-bold">Experience</h1>
-              <p className="text-xl">
-                Currently Learning, No work experience yet...
-              </p>
+              <ExpTog />
             </div>
 
             <div className="align-bottom text-3xl font-inter mt-13 font-bold">
               <h2>Connect With Me</h2>
-              <div className="flex gap-4 justify-center mt-2">
+              <div className="flex gap-4 justify-center mt-2 mb-5">
                 <a
                   href="https://www.linkedin.com/in/parth-munjal-264508368/"
                   target="_blank"
