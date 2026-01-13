@@ -66,7 +66,7 @@ function Hero() {
               <h2>Connect With Me</h2>
               <div className="flex gap-4 justify-center mt-2 mb-5">
                 <a
-                  href="https://www.linkedin.com/in/parth-munjal-264508368/"
+                  href="https://www.linkedin.com/in/parthmunjal07/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
@@ -114,7 +114,7 @@ function Hero() {
                   </svg>
                 </a>
                 <a
-                  href="https://x.com/ParthMunja92416"
+                  href="https://x.com/parthmunjal07"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
