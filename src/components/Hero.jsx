@@ -3,8 +3,29 @@ import profile from "../assets/profile.jpg";
 import PageWrapper from "./PageWrapper";
 import PostCard from "./PostCard";
 import ExpTog from "./ExpTog";
+import ProjectCard from "./ProjectCard";
+import cafeMate from "../assets/cafeMate.png";
+import eventify from "../assets/eventify.png";
+import { motion } from "framer-motion";
 
 function Hero() {
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const card = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   return (
     <PageWrapper>
       <div className="min-h-screen bg-black text-white">
@@ -61,6 +82,50 @@ function Hero() {
               <h1 className="text-3xl font-bold">Experience</h1>
               <ExpTog />
             </div>
+
+            <h1 className="font-inter text-3xl font-bold mt-7">Projects</h1>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2"
+              variants={container}
+              initial="hidden"
+              animate="show"
+            >
+              <motion.div variants={card} whileHover={{ y: -8 }}>
+                <ProjectCard
+                  name="Cafe-Mate"
+                  description="An online prototype for a canteen management system for colleges where students can order food online from their phones and collect it from the counter without waiting in long queues..."
+                  image={cafeMate}
+                  liveLink="#"
+                  githubLink="https://github.com/parthmunjal07/CafeMate"
+                />
+              </motion.div>
+
+              <motion.div variants={card} whileHover={{ y: -8 }}>
+                <ProjectCard
+                  name="Eventify"
+                  description="An all-in-one event tracking web application that helps college clubs and students to manage and keep track of various events happening in the college..."
+                  image={eventify}
+                  liveLink="https://eventify-event-tracker.vercel.app/"
+                  githubLink="https://github.com/parthmunjal07/Eventify-Event-Tracker"
+                />
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="mt-6 flex justify-center"
+            >
+              <motion.a
+                href="/projects"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-2 bg-gray-500 rounded-lg font-inter text-lg tracking-wide
+               hover:border border-gray-400 transition-all"
+              >
+                View More →
+              </motion.a>
+            </motion.div>
 
             <div className="align-bottom text-3xl font-inter mt-13 font-bold">
               <h2>Connect With Me</h2>

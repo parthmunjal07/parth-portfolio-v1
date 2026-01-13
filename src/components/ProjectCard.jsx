@@ -2,44 +2,67 @@ import React from "react";
 
 function ProjectCard(props) {
   return (
-    
-    <div className="border-2 border-gray-300 w-[90%] md:w-[90%] rounded-lg p-4 m-4 hover:shadow-lg transition-shadow duration-300">
-      <img className="w-[350px] p-3 rounded-2xl hover:scale-105 transition duration-300" src={props.image} alt={props.name} />
-      <div className="flex justify-between">
-        <div>
-          <h1 className="text-3xl font-inter">{props.name}</h1>
-        </div>
-        <div className="flex">
-          <a href={props.liveLink} target="_blank">
+    <div className="border-2 border-gray-300 w-full md:w-[90%] rounded-xl p-5 md:p-6 m-4 
+                    hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+
+      {/* Image */}
+      <div className="w-full flex justify-center mb-4">
+        <img
+          className="w-full max-w-[350px] rounded-2xl object-cover 
+                     hover:scale-105 transition-transform duration-300"
+          src={props.image}
+          alt={props.name}
+        />
+      </div>
+
+      {/* Header */}
+      <div className="flex items-center justify-between gap-4">
+        <h1 className="text-2xl md:text-3xl font-inter leading-tight">
+          {props.name}
+        </h1>
+
+        <div className="flex items-center gap-4">
+          <a
+            href={props.liveLink}
+            target="_blank"
+            className="hover:scale-110 transition-transform"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="25"
+              width="24"
               fill="currentColor"
               viewBox="0 0 256 256"
             >
               <path d="M128,24h0A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm87.62,96H175.79C174,83.49,159.94,57.67,148.41,42.4A88.19,88.19,0,0,1,215.63,120ZM96.23,136h63.54c-2.31,41.61-22.23,67.11-31.77,77C118.45,203.1,98.54,177.6,96.23,136Zm0-16C98.54,78.39,118.46,52.89,128,43c9.55,9.93,29.46,35.43,31.77,77Zm11.36-77.6C96.06,57.67,82,83.49,80.21,120H40.37A88.19,88.19,0,0,1,107.59,42.4ZM40.37,136H80.21c1.82,36.51,15.85,62.33,27.38,77.6A88.19,88.19,0,0,1,40.37,136Zm108,77.6c11.53-15.27,25.56-41.09,27.38-77.6h39.84A88.19,88.19,0,0,1,148.41,213.6Z"></path>
             </svg>
           </a>
-          <a href={props.githubLink} className="ml-4" target="_blank">
+
+          <a
+            href={props.githubLink}
+            target="_blank"
+            className="hover:scale-110 transition-transform"
+          >
             <svg
-              className="w-6 h-6 text-gray-800 dark:text-white"
+              className="w-6 h-6"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
           </a>
         </div>
       </div>
 
-      <p className="mt-3 text-l text-gray-500 font-inter">{props.description}</p>
+      {/* Description */}
+      <p className="mt-4 text-gray-500 font-inter leading-relaxed">
+        {props.description}
+      </p>
     </div>
   );
 }
