@@ -13,7 +13,8 @@ function Projects() {
       <div className="w-full text-center mt-25 mb-10">
         <h1 className="text-5xl font-bold font-oswald">My Projects</h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <hr className="text-gray-700 font-bold mb-10" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <ProjectCard
           name="Portfolio-v1"
           description="Version-1 of my personal portfolio website. In this I have tried to maintain the simplicity with focus on content I am providing instead of the animations and stuff..."

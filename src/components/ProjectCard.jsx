@@ -2,9 +2,11 @@ import React from "react";
 
 function ProjectCard(props) {
   return (
-    <div className="border-2 border-gray-300 w-full md:w-[90%] rounded-xl p-5 md:p-6 m-4 
-                    hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-
+    <div
+      className="border-2 border-gray-300 w-full rounded-xl p-5 md:p-4
+hover:shadow-lg transition-all duration-300 hover:-translate-y-1
+"
+    >
       {/* Image */}
       <div className="w-full flex justify-center mb-4">
         <img

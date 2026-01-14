@@ -85,7 +85,7 @@ function Hero() {
 
             <h1 className="font-inter text-3xl font-bold mt-7">Projects</h1>
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2"
+              className="grid grid-cols-1 md:grid-cols-2 gap-5"
               variants={container}
               initial="hidden"
               animate="show"
