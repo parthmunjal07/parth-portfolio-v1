@@ -2,10 +2,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import IIC from "./orgIcons/iic.jpg";
 import CS from "./orgIcons/cs.jpg";
+import UCCDA from "./orgIcons/uccda.jpg";
 
 const professionalData = [];
 
 const communityData = [
+  {
+    icon: UCCDA,
+    title: "Member & Contributor",
+    org: "University Computer Center, and Digital Affairs JC Bose UST",
+    desc: "Helping and contributing in workshops and projects...",
+    year: "Feb 2026 – Present",
+  },
   {
     icon: IIC,
     title: "Member & Contributor",

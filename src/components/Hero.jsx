@@ -1,5 +1,6 @@
 import React from "react";
 import profile from "../assets/profile.jpg";
+import profile2 from "../assets/profile2.jpeg";
 import PageWrapper from "./PageWrapper";
 import PostCard from "./PostCard";
 import ExpTog from "./ExpTog";
@@ -32,12 +33,12 @@ function Hero() {
         <div className="h-full w-[90%] md:w-[65%] mx-auto flex justify-center text-center">
           <div className="mt-25 flex flex-col gap-4 items-center ">
             <img
-              src={profile}
+              src={profile2}
               alt="Parth Munjal — profile"
               className="w-[100px] rounded-full"
             />
 
-            <h1 className="text-4xl font-oswald ">
+            <h1 className="text-4xl font-jetbrainsmono">
               Hi, I'm{" "}
               <span className="font-bold underline italic">Parth Munjal</span>
             </h1>
@@ -47,7 +48,7 @@ function Hero() {
               DSA.
             </p>
 
-            <div>
+            <div className="font-inter">
               My Skillset:{" "}
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
