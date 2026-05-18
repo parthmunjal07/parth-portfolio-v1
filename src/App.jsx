@@ -22,8 +22,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog1" element={<Blog1 />} />
-        <Route path="/blog2" element={<CodingCons />} />
-        <Route path="/blog3" element ={<Git />} />
+        <Route path="/blog2" element ={<Git />} />
       </Routes>
       </AnimatePresence>
     </BrowserRouter>

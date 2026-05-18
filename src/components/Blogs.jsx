@@ -18,12 +18,9 @@ function Blogs() {
         link="/blog1" 
         image={Goals}/>
         <BlogCard title="My learning on Git"
-        content="Just a few of the things I want to achieve and am fascinated by."
-        link="/blog3"
+        content="Just a learning guide for those who are new to git."
+        link="/blog2"
         image={Git} />
-        <BlogCard title="My Consistently coding challenge"
-        content="Just tried out a challenge."
-        link="/blog2" />
       </div>
     </section>
     </div>
