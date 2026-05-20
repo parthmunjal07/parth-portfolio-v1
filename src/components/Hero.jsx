@@ -5,10 +5,15 @@ import PageWrapper from "./PageWrapper";
 import PostCard from "./PostCard";
 import ExpTog from "./ExpTog";
 import ProjectCard from "./ProjectCard";
+import BlogCard from "./BlogCard"; // ✅ IMPORT BLOG CARD
 import swiftpolls from "../assets/swiftpolls.png";
 import soon from "../assets/soon.png";
 import eventify from "../assets/eventify.png";
 import { motion } from "framer-motion";
+
+// ✅ IMPORT BLOG IMAGES (Using the images available in your repo)
+import gitImg from "./blogs/blogImg/Git.png";
+import goalsImg from "./blogs/blogImg/Goals.jpeg";
 
 // Skills segregated by category
 const skillCategories = [
@@ -38,7 +43,7 @@ const skillCategories = [
       {
         name: "Next.js",
         link: "https://nextjs.org/",
-        icon: "https://cdn.simpleicons.org/nextdotjs/ffffff", // White icon
+        icon: "https://cdn.simpleicons.org/nextdotjs/ffffff",
       },
     ],
   },
@@ -53,7 +58,7 @@ const skillCategories = [
       {
         name: "Express",
         link: "https://expressjs.com/",
-        icon: "https://cdn.simpleicons.org/express/ffffff", // White icon
+        icon: "https://cdn.simpleicons.org/express/ffffff",
       },
     ],
   },
@@ -78,7 +83,7 @@ const skillCategories = [
       {
         name: "Sockets",
         link: "https://socket.io/",
-        icon: "https://cdn.simpleicons.org/socketdotio/ffffff", // White icon
+        icon: "https://cdn.simpleicons.org/socketdotio/ffffff",
       },
       {
         name: "Git",
@@ -88,7 +93,7 @@ const skillCategories = [
       {
         name: "GitHub",
         link: "https://github.com/",
-        icon: "https://cdn.simpleicons.org/github/ffffff", // White icon
+        icon: "https://cdn.simpleicons.org/github/ffffff",
       },
     ],
   },
@@ -116,8 +121,8 @@ function Hero() {
   return (
     <PageWrapper>
       <div className="min-h-screen bg-black text-white">
-        <div className="h-full w-[90%] md:w-[65%] mx-auto flex justify-center text-center">
-          <div className="mt-25 flex flex-col gap-4 items-center ">
+        <div className="h-full w-[90%] md:w-[75%] lg:w-[65%] mx-auto flex justify-center text-center">
+          <div className="mt-25 flex flex-col gap-4 items-center w-full">
             <img
               src={profile2}
               alt="Parth Munjal — profile"
@@ -133,11 +138,10 @@ function Hero() {
               I'm building and learning about FullStack Web Applications
             </p>
 
-            {/* CATEGORIZED SKILLSET SECTION */}
+            {/* SKILLSET SECTION */}
             <div className="mt-10 flex flex-col items-center w-full font-inter">
               <h1 className="text-3xl font-bold mb-8">Skillset</h1>
 
-              {/* UPDATED: Changed flex-col to flex-wrap and widened max-w */}
               <motion.div
                 variants={container}
                 initial="hidden"
@@ -180,19 +184,22 @@ function Hero() {
               </motion.div>
             </div>
 
+            {/* EXPERIENCE SECTION */}
             <div className="mt-12 font-inter w-full">
               <h1 className="text-3xl font-bold mb-6">Experience</h1>
               <ExpTog />
             </div>
 
-            <h1 className="font-inter text-3xl font-bold mt-10 mb-4">
+            {/* FEATURED PROJECTS SECTION */}
+            <h1 className="font-inter text-3xl font-bold mt-10 mb-6">
               Featured Projects
             </h1>
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 gap-5"
+              className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full"
               variants={container}
               initial="hidden"
-              animate="show"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
             >
               <motion.div variants={card} whileHover={{ y: -8 }}>
                 <ProjectCard
@@ -212,14 +219,15 @@ function Hero() {
                   image={soon}
                   liveLink="#"
                   githubLink="https://github.com/parthmunjal07/Somnia-forms-trpc"
+                  status="in-progress"
                 />
               </motion.div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="mt-8 flex justify-center"
             >
               <motion.a
@@ -228,7 +236,56 @@ function Hero() {
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-2 bg-white/10 rounded-lg font-inter text-lg tracking-wide hover:bg-white/20 hover:border-white/30 border border-transparent transition-all"
               >
-                View More →
+                View All Projects →
+              </motion.a>
+            </motion.div>
+
+            {/* ✅ NEW: FEATURED BLOGS SECTION */}
+            <h1 className="font-inter text-3xl font-bold mt-20 mb-6">
+              Latest Blogs
+            </h1>
+            
+            {/* The grid is set to md:grid-cols-3 to show 3 in a row on desktop */}
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left"
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+            >
+
+              <motion.div variants={card} whileHover={{ y: -8 }}>
+                <BlogCard
+                  title="Git & GitHub Basics"
+                  content="A comprehensive guide to understanding version control using Git and GitHub for beginners."
+                  link="/blog2"
+                  image={gitImg}
+                />
+              </motion.div>
+
+              <motion.div variants={card} whileHover={{ y: -8 }}>
+                <BlogCard
+                  title="My Bucket List"
+                  content="Just a few of the things I want to achieve and am fascinated by."
+                  link="/blog1"
+                  image={goalsImg}
+                />
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-8 flex justify-center mb-16"
+            >
+              <motion.a
+                href="/blogs"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-2 bg-white/10 rounded-lg font-inter text-lg tracking-wide hover:bg-white/20 hover:border-white/30 border border-transparent transition-all"
+              >
+                Read All Blogs →
               </motion.a>
             </motion.div>
 

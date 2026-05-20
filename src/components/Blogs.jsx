@@ -17,7 +17,7 @@ function Blogs() {
         content="Just a few of the things I want to achieve and am fascinated by."
         link="/blog1" 
         image={Goals}/>
-        <BlogCard title="My learning on Git"
+        <BlogCard title="Git & GitHub Basics"
         content="Just a learning guide for those who are new to git."
         link="/blog2"
         image={Git} />

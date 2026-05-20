@@ -32,7 +32,6 @@ function App() {
           </AnimatePresence>
         </main>
 
-        {/* Global Footer */}
         <Footer />
         
       </div>
