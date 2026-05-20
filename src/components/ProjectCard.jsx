@@ -2,31 +2,31 @@ import React from "react";
 
 function ProjectCard(props) {
   return (
-    <div
-      className="border-2 border-gray-300 w-full rounded-xl p-5 md:p-4
-hover:shadow-lg transition-all duration-300 hover:-translate-y-1
-"
-    >
+    <div className="border-2 border-gray-500 w-full h-full flex flex-col rounded-xl p-5 md:p-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
       {/* Image */}
       <div className="w-full flex justify-center mb-4">
         <img
-          className="w-full max-w-[350px] rounded-2xl object-cover 
-                     hover:scale-105 transition-transform duration-300"
+          className="w-[350px] rounded-2xl object-cover hover:scale-105 transition-transform duration-300"
           src={props.image}
           alt={props.name}
         />
       </div>
 
       {/* Header */}
-      <div className="flex items-center justify-between gap-4">
-        <h1 className="text-2xl md:text-3xl font-inter leading-tight">
-          {props.name}
-        </h1>
+      <div className="flex items-start justify-between gap-4">
+        {/* Title & Status Tag Wrapper */}
+        <div className="flex flex-col gap-2">
+          <h1 className="text-2xl font-bold md:text-3xl font-inter leading-tight">
+            {props.name}
+          </h1>
+        </div>
 
-        <div className="flex items-center gap-4">
+        {/* Links */}
+        <div className="flex items-center gap-4 mt-1">
           <a
             href={props.liveLink}
             target="_blank"
+            rel="noopener noreferrer"
             className="hover:scale-110 transition-transform"
           >
             <svg
@@ -42,6 +42,7 @@ hover:shadow-lg transition-all duration-300 hover:-translate-y-1
           <a
             href={props.githubLink}
             target="_blank"
+            rel="noopener noreferrer"
             className="hover:scale-110 transition-transform"
           >
             <svg
@@ -61,10 +62,23 @@ hover:shadow-lg transition-all duration-300 hover:-translate-y-1
         </div>
       </div>
 
-      {/* Description */}
-      <p className="mt-4 text-gray-500 font-inter leading-relaxed">
+      {/* Description - Added flex-grow so it expands to fill empty space */}
+      <p className="mt-4 text-gray-500 font-inter leading-relaxed flex-grow">
         {props.description}
       </p>
+
+      {/* Footer / Status Tag - Added mt-auto to ensure it sticks to the bottom */}
+      <div className="flex mt-5 font-inter">
+        <span
+          className={`w-fit px-3 py-1 text-sm font-semibold rounded-full ${
+            props.status === "completed"
+              ? "bg-green-100 text-green-700"
+              : "bg-yellow-100 text-yellow-700"
+          }`}
+        >
+          {props.status === "completed" ? "Completed" : "In Progress"}
+        </span>
+      </div>
     </div>
   );
 }

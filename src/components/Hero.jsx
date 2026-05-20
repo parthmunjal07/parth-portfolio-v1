@@ -5,9 +5,69 @@ import PageWrapper from "./PageWrapper";
 import PostCard from "./PostCard";
 import ExpTog from "./ExpTog";
 import ProjectCard from "./ProjectCard";
-import cafeMate from "../assets/cafeMate.png";
+import swiftpolls from "../assets/swiftpolls.png";
+import soon from "../assets/soon.png";
 import eventify from "../assets/eventify.png";
 import { motion } from "framer-motion";
+
+// Skills segregated by category
+const skillCategories = [
+  {
+    title: "Frontend",
+    skills: [
+      {
+        name: "React",
+        link: "https://react.dev/",
+        icon: "https://cdn.simpleicons.org/react/61DAFB",
+      },
+      {
+        name: "Next.js",
+        link: "https://nextjs.org/",
+        icon: "https://cdn.simpleicons.org/nextdotjs/ffffff", // White icon
+      },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      {
+        name: "Node.js",
+        link: "https://nodejs.org/",
+        icon: "https://cdn.simpleicons.org/nodedotjs/339933",
+      },
+      {
+        name: "Express",
+        link: "https://expressjs.com/",
+        icon: "https://cdn.simpleicons.org/express/ffffff", // White icon
+      },
+    ],
+  },
+  {
+    title: "Database",
+    skills: [
+      {
+        name: "MongoDB",
+        link: "https://www.mongodb.com/",
+        icon: "https://cdn.simpleicons.org/mongodb/47A248",
+      },
+      {
+        name: "Postgres",
+        link: "https://www.postgresql.org/",
+        icon: "https://cdn.simpleicons.org/postgresql/4169E1",
+      },
+    ],
+  },
+  {
+    title: "Utilities",
+    skills: [
+      {
+        name: "Sockets",
+        link: "https://socket.io/",
+        icon: "https://cdn.simpleicons.org/socketdotio/ffffff", // White icon
+      },
+    ],
+  },
+];
 
 function Hero() {
   const container = {
@@ -27,6 +87,7 @@ function Hero() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
+
   return (
     <PageWrapper>
       <div className="min-h-screen bg-black text-white">
@@ -43,48 +104,65 @@ function Hero() {
               <span className="font-bold underline italic">Parth Munjal</span>
             </h1>
 
-            <p className="text-2xl w-3/4 font-inter">
-              I'm building and learning about FullStack Web Applications and
-              DSA.
+            <p className="text-2xl w-3/4 font-inter text-gray-200">
+              I'm building and learning about FullStack Web Applications
             </p>
 
-            <div className="font-inter">
-              My Skillset:{" "}
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end text-black dark:text-white hover:cursor-pointer mx-2"
+            {/* CATEGORIZED SKILLSET SECTION */}
+            <div className="mt-10 flex flex-col items-center w-full font-inter">
+              <h1 className="text-3xl font-bold mb-8">Skillset</h1>
+
+              {/* UPDATED: Changed flex-col to flex-wrap and widened max-w */}
+              <motion.div
+                variants={container}
+                initial="hidden"
+                animate="show"
+                className="flex flex-wrap justify-center items-start gap-10 md:gap-12 w-full max-w-4xl"
               >
-                JavaScript
-              </a>
-              ,
-              <a
-                href="https://react.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end text-black dark:text-white hover:cursor-pointer ml-2"
-              >
-                React
-              </a>{" "}
-              ,
-              <a
-                href="https://tailwindcss.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-sm bg-black/5 dark:bg-white/15 border border-dashed dark:border-white/30 border-black/20 py-1 px-2 rounded-md skill-inner-shadow self-end dark:text-white hover:cursor-pointer mr-2"
-              >
-                Tailwind CSS
-              </a>{" "}
-              and many more coming soon!!
+                {skillCategories.map((category) => (
+                  <div
+                    key={category.title}
+                    className="flex flex-col items-center"
+                  >
+                    <h3 className="text-sm uppercase tracking-widest text-gray-400 mb-3 font-semibold">
+                      {category.title}
+                    </h3>
+                    <div className="flex flex-wrap justify-center gap-3">
+                      {category.skills.map((skill) => (
+                        <motion.a
+                          key={skill.name}
+                          variants={card}
+                          whileHover={{ y: -4, scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          href={skill.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/30 transition-colors skill-inner-shadow cursor-pointer"
+                        >
+                          <img
+                            src={skill.icon}
+                            alt={`${skill.name} logo`}
+                            className="w-5 h-5"
+                          />
+                          <span className="text-sm font-medium tracking-wide">
+                            {skill.name}
+                          </span>
+                        </motion.a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
             </div>
 
-            <div className="mt-10 font-inter">
-              <h1 className="text-3xl font-bold">Experience</h1>
+            <div className="mt-12 font-inter w-full">
+              <h1 className="text-3xl font-bold mb-6">Experience</h1>
               <ExpTog />
             </div>
 
-            <h1 className="font-inter text-3xl font-bold mt-7">Projects</h1>
+            <h1 className="font-inter text-3xl font-bold mt-10 mb-4">
+              Featured Projects
+            </h1>
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 gap-5"
               variants={container}
@@ -93,57 +171,57 @@ function Hero() {
             >
               <motion.div variants={card} whileHover={{ y: -8 }}>
                 <ProjectCard
-                  name="Cafe-Mate"
-                  description="An online prototype for a canteen management system for colleges where students can order food online from their phones and collect it from the counter without waiting in long queues..."
-                  image={cafeMate}
-                  liveLink="#"
-                  githubLink="https://github.com/parthmunjal07/CafeMate"
+                  name="SwiftPolls"
+                  description="SwiftPolls is a dynamic, full-stack web application designed to facilitate seamless real-time audience engagement and asynchronous feedback collection."
+                  image={swiftpolls}
+                  liveLink="https://swiftpolls.parthmunjal.in"
+                  githubLink="https://github.com/parthmunjal07/swiftpolls"
+                  status="completed"
                 />
               </motion.div>
 
               <motion.div variants={card} whileHover={{ y: -8 }}>
                 <ProjectCard
-                  name="Eventify"
-                  description="An all-in-one event tracking web application that helps college clubs and students to manage and keep track of various events happening in the college..."
-                  image={eventify}
-                  liveLink="https://eventify-event-tracker.vercel.app/"
-                  githubLink="https://github.com/parthmunjal07/Eventify-Event-Tracker"
+                  name="Somnia Forms"
+                  description="A production-style form builder SaaS where users can create dynamic forms, publish shareable form links and collect responses...."
+                  image={soon}
+                  liveLink="#"
+                  githubLink="https://github.com/parthmunjal07/Somnia-forms-trpc"
                 />
               </motion.div>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="mt-6 flex justify-center"
+              className="mt-8 flex justify-center"
             >
               <motion.a
                 href="/projects"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2 bg-gray-500 rounded-lg font-inter text-lg tracking-wide
-               hover:border border-gray-400 transition-all"
+                className="px-6 py-2 bg-white/10 rounded-lg font-inter text-lg tracking-wide hover:bg-white/20 hover:border-white/30 border border-transparent transition-all"
               >
                 View More →
               </motion.a>
             </motion.div>
 
-            <div className="align-bottom text-3xl font-inter mt-13 font-bold">
+            <div className="align-bottom text-3xl font-inter mt-16 font-bold">
               <h2>Connect With Me</h2>
-              <div className="flex gap-4 justify-center mt-2 mb-5">
+              <div className="flex gap-4 justify-center mt-4 mb-8">
+                {/* Social Links */}
                 <a
                   href="https://www.linkedin.com/in/parthmunjal07/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
+                  className="text-blue-500 hover:text-blue-400 transition-colors"
                   aria-label="LinkedIn — opens in new tab"
                 >
                   <svg
-                    className="w-6 h-6 text-gray-800 dark:text-white"
+                    className="w-7 h-7"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -160,15 +238,13 @@ function Hero() {
                   href="https://github.com/parthmunjal07"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-800 hover:underline"
+                  className="text-gray-300 hover:text-white transition-colors"
                   aria-label="GitHub — opens in new tab"
                 >
                   <svg
-                    className="w-6 h-6 text-gray-800 dark:text-white"
+                    className="w-7 h-7"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -179,17 +255,17 @@ function Hero() {
                     />
                   </svg>
                 </a>
+
                 <a
                   href="https://x.com/parthmunjal07"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   <svg
-                    className="w-6 h-6 text-gray-800 dark:text-white"
+                    className="w-7 h-7"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -201,14 +277,13 @@ function Hero() {
                   href="https://www.instagram.com/parth.codes.exe/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-pink-500 transition-colors"
                   aria-label="Instagram — opens in new tab"
                 >
                   <svg
-                    className="w-6 h-6 text-gray-800 dark:text-white"
+                    className="w-7 h-7"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
                     fill="none"
                     viewBox="0 0 24 24"
                   >
@@ -223,15 +298,13 @@ function Hero() {
 
                 <a
                   href="mailto:parth.munjal07@gmail.com"
-                  className="hover:underline"
+                  className="text-gray-300 hover:text-red-400 transition-colors"
                   aria-label="Send email"
                 >
                   <svg
-                    className="w-6 h-6 text-gray-800 dark:text-white"
+                    className="w-7 h-7"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
                     fill="none"
                     viewBox="0 0 24 24"
                   >
@@ -244,9 +317,10 @@ function Hero() {
                     />
                   </svg>
                 </a>
+
                 <a
                   href="https://leetcode.com/u/Parth_Munjal/"
-                  className="hover:underline"
+                  className="text-gray-300 hover:text-yellow-500 transition-colors"
                   aria-label="LeetCode Profile"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -255,15 +329,14 @@ function Hero() {
                     role="img"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
-                    id="Leetcode--Streamline-Simple-Icons"
-                    height="24"
-                    width="24"
+                    height="28"
+                    width="28"
                   >
                     <path
                       d="M13.483 0a1.374 1.374 0 0 0 -0.961 0.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0 -1.209 2.104 5.35 5.35 0 0 0 -0.125 0.513 5.527 5.527 0 0 0 0.062 2.362 5.83 5.83 0 0 0 0.349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193 0.039 0.038c2.248 2.165 5.852 2.133 8.063 -0.074l2.396 -2.392c0.54 -0.54 0.54 -1.414 0.003 -1.955a1.378 1.378 0 0 0 -1.951 -0.003l-2.396 2.392a3.021 3.021 0 0 1 -4.205 0.038l-0.02 -0.019 -4.276 -4.193c-0.652 -0.64 -0.972 -1.469 -0.948 -2.263a2.68 2.68 0 0 1 0.066 -0.523 2.545 2.545 0 0 1 0.619 -1.164L9.13 8.114c1.058 -1.134 3.204 -1.27 4.43 -0.278l3.501 2.831c0.593 0.48 1.461 0.387 1.94 -0.207a1.384 1.384 0 0 0 -0.207 -1.943l-3.5 -2.831c-0.8 -0.647 -1.766 -1.045 -2.774 -1.202l2.015 -2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0 -1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38 -1.382 1.38 1.38 0 0 0 -1.38 -1.382z"
-                      fill="#ffffff"
-                      stroke-width="1"
-                    ></path>
+                      fill="currentColor"
+                      strokeWidth="1"
+                    />
                   </svg>
                 </a>
               </div>
