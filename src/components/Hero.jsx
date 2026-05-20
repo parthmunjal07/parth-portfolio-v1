@@ -13,6 +13,21 @@ import { motion } from "framer-motion";
 // Skills segregated by category
 const skillCategories = [
   {
+    title: "Languages",
+    skills: [
+      {
+        name: "JavaScript",
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        icon: "https://cdn.simpleicons.org/javascript/F7DF1E", 
+      },
+      {
+        name: "TypeScript",
+        link: "https://www.typescriptlang.org/",
+        icon: "https://cdn.simpleicons.org/typescript/3178C6", 
+      },
+    ],
+  },
+  {
     title: "Frontend",
     skills: [
       {
@@ -64,6 +79,16 @@ const skillCategories = [
         name: "Sockets",
         link: "https://socket.io/",
         icon: "https://cdn.simpleicons.org/socketdotio/ffffff", // White icon
+      },
+      {
+        name: "Git",
+        link: "https://git-scm.com/",
+        icon: "https://cdn.simpleicons.org/git/F05032", 
+      },
+      {
+        name: "GitHub",
+        link: "https://github.com/",
+        icon: "https://cdn.simpleicons.org/github/ffffff", // White icon
       },
     ],
   },

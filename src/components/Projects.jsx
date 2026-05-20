@@ -23,6 +23,7 @@ function Projects() {
               image={portfolio}
               liveLink="https://parth-portfolio-v1.vercel.app/"
               githubLink="https://github.com/parthmunjal07/parth-portfolio-v1"
+              status="completed"
             />
             <ProjectCard
               name="SwiftPolls"
