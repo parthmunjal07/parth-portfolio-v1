@@ -92,7 +92,17 @@ const skillCategories = [
         link: "https://github.com/",
         icon: "https://cdn.simpleicons.org/github/ffffff",
       },
-    ],
+      {
+        name: "Prisma",
+        link: "https://www.prisma.io/",
+        icon: "https://cdn.simpleicons.org/prisma/ffffff",
+      },
+      {
+        name: "Drizzle",
+        link: "https://orm.drizzle.team/",
+        icon: "https://cdn.simpleicons.org/drizzle/C5F74F",
+      },
+    ],  
   },
 ];
 
@@ -143,17 +153,17 @@ function Hero() {
                 variants={container}
                 initial="hidden"
                 animate="show"
-                className="flex flex-wrap justify-center items-start gap-10 md:gap-12 w-full max-w-4xl"
+                className="flex flex-col gap-6 w-full max-w-2xl mx-auto mt-4"
               >
                 {skillCategories.map((category) => (
                   <div
                     key={category.title}
-                    className="flex flex-col items-center"
+                    className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6 w-full text-left"
                   >
-                    <h3 className="text-sm uppercase tracking-widest text-gray-400 mb-3 font-semibold">
-                      {category.title}
+                    <h3 className="text-sm uppercase tracking-widest text-gray-400 font-semibold w-32 shrink-0">
+                      {category.title}:
                     </h3>
-                    <div className="flex flex-wrap justify-center gap-3">
+                    <div className="flex flex-wrap items-center gap-3">
                       {category.skills.map((skill) => (
                         <motion.a
                           key={skill.name}
