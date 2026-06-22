@@ -1,8 +1,8 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import cafeMate from "../assets/cafeMate.png";
-import eventify from "../assets/eventify.png";
 import portfolio from "../assets/portfolio.png";
+import meridian from "../assets/meridian.png"
+import somnia from "../assets/somnia.png"
 import PageWrapper from "./PageWrapper";
 import swiftpolls from "../assets/swiftpolls.png";
 import soon from "../assets/soon.png";
@@ -18,12 +18,31 @@ function Projects() {
           <hr className="text-gray-700 font-bold mb-10" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ProjectCard
-              name="Portfolio-v1"
-              description="Version-1 of my personal portfolio website. In this I have tried to maintain the simplicity with focus on content I am providing instead of the animations and stuff..."
-              image={portfolio}
-              liveLink="https://parth-portfolio-v1.vercel.app/"
-              githubLink="https://github.com/parthmunjal07/parth-portfolio-v1"
+              name="ShipFlowAI"
+              description="End to End Coding with AI"
+              image={soon}
+              liveLink="https://meridian.parthmunjal.in/"
+              githubLink="https://github.com/parthmunjal07/meridian"
+              status="In Progress"
+              techStack={["NextJS", "tRPC", "OpenAI", "Postgres"]}
+              />
+            <ProjectCard
+              name="Meridian"
+              description="Meridian is a high-performance, email and calendar client that implements autonomous agents to execute complex scheduling and messaging workflows via natural language...."
+              image={meridian}
+              liveLink="https://meridian.parthmunjal.in/"
+              githubLink="https://github.com/parthmunjal07/meridian"
               status="completed"
+              techStack={["NextJS", "Corsair", "OpenAI", "Postgres"]}
+              />
+            <ProjectCard
+                name="Somnia Forms"
+                description="A production-style form builder SaaS where users can create dynamic forms, publish shareable form links and collect responses... Inspired from TypeForm with with my own taste."
+                image={somnia}
+                liveLink="https://somniaforms.parthmunjal.in"
+                githubLink="https://github.com/parthmunjal07/Somnia-forms-trpc"
+                status="completed"
+                techStack={["NextJS", "tRPC", "Express", "Postgres"]}
             />
             <ProjectCard
               name="SwiftPolls"
@@ -32,13 +51,7 @@ function Projects() {
               liveLink="https://swiftpolls.parthmunjal.in"
               githubLink="https://github.com/parthmunjal07/swiftpolls"
               status="completed"
-            />
-            <ProjectCard
-              name="Somnia Forms"
-              description="A production-style form builder SaaS where users can create dynamic forms, publish shareable form links and collect responses...."
-              image={soon}
-              liveLink="#"
-              githubLink="https://github.com/parthmunjal07/Somnia-forms-trpc"
+              techStack={["React", "WebSockets", "Node.js", "Express", "Postgres"]}
             />
           </div>
         </div>

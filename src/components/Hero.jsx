@@ -5,15 +5,12 @@ import PageWrapper from "./PageWrapper";
 import PostCard from "./PostCard";
 import ExpTog from "./ExpTog";
 import ProjectCard from "./ProjectCard";
-import BlogCard from "./BlogCard"; // ✅ IMPORT BLOG CARD
-import swiftpolls from "../assets/swiftpolls.png";
-import soon from "../assets/soon.png";
-import eventify from "../assets/eventify.png";
+import BlogCard from "./BlogCard"; 
 import { motion } from "framer-motion";
-
-// ✅ IMPORT BLOG IMAGES (Using the images available in your repo)
 import gitImg from "./blogs/blogImg/Git.png";
 import goalsImg from "./blogs/blogImg/Goals.jpeg";
+import somnia from "../assets/somnia.png"
+import meridian from "../assets/meridian.png"
 
 // Skills segregated by category
 const skillCategories = [
@@ -203,24 +200,24 @@ function Hero() {
             >
               <motion.div variants={card} whileHover={{ y: -8 }}>
                 <ProjectCard
-                  name="SwiftPolls"
-                  description="SwiftPolls is a dynamic, full-stack web application designed to facilitate seamless real-time audience engagement and asynchronous feedback collection."
-                  image={swiftpolls}
-                  liveLink="https://swiftpolls.parthmunjal.in"
-                  githubLink="https://github.com/parthmunjal07/swiftpolls"
-                  status="completed"
-                />
+              name="Meridian"
+              description="Meridian is a high-performance, email and calendar client that implements autonomous agents to execute complex scheduling and messaging workflows via natural language...."
+              image={meridian}
+              liveLink="https://meridian.parthmunjal.in/"
+              githubLink="https://github.com/parthmunjal07/meridian"
+              status="completed"
+              />
               </motion.div>
 
               <motion.div variants={card} whileHover={{ y: -8 }}>
                 <ProjectCard
-                  name="Somnia Forms"
-                  description="A production-style form builder SaaS where users can create dynamic forms, publish shareable form links and collect responses...."
-                  image={soon}
-                  liveLink="#"
-                  githubLink="https://github.com/parthmunjal07/Somnia-forms-trpc"
-                  status="in-progress"
-                />
+                name="Somnia Forms"
+                description="A production-style form builder SaaS where users can create dynamic forms, publish shareable form links and collect responses... Inspired from TypeForm with with my own taste."
+                image={somnia}
+                liveLink="https://somniaforms.parthmunjal.in"
+                githubLink="https://github.com/parthmunjal07/Somnia-forms-trpc"
+                status="completed"
+            />
               </motion.div>
             </motion.div>
 

@@ -67,6 +67,20 @@ function ProjectCard(props) {
         {props.description}
       </p>
 
+      {/* Tech Stack Tags */}
+      {props.techStack && props.techStack.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-4">
+          {props.techStack.map((tech, index) => (
+            <span
+              key={index}
+              className="px-2 py-1 text-xs font-medium rounded-md bg-gray-800 text-gray-300"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
+
       {/* Footer / Status Tag - Added mt-auto to ensure it sticks to the bottom */}
       <div className="flex mt-5 font-inter">
         <span
